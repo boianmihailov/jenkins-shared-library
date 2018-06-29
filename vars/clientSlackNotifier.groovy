@@ -5,6 +5,7 @@ def call(String buildResult, String tokenID, String slackURL, String targetChann
   echo tokenID
   echo slackURL
   echo targetChannel
+  echo token
   echo "end debug"
   if ( buildResult == "SUCCESS" ) {
     slackSend(color: "good", message: "Job: ${env.JOB_NAME} with buildnumber ${env.BUILD_NUMBER} was successful", baseUrl: slackURL, tokenCredentialId: tokenID, channel: targetChannel, token: token)
